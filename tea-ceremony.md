@@ -9,20 +9,23 @@
 
 **Click 2:**  
 **Initiates:**  
-- **MC prompt:** “Please now welcome the new couple, Phillip and Christina.”  
-- **Music Cue:** [Start music placeholder]  
-- **Live Action:** The couple walks in through the foyer into the house and stands in front of their parents.
+- **MC prompt:** “Please now welcome the new couple, Phillip and Christina.”
 
 **Click 3:**  
 **Initiates:**  
-- **Music Cue:** [Fade out music placeholder].
+- **Music Cue:** [Start music placeholder].
+- **Live Action:** The couple walks in through the foyer into the house and stands in front of their parents.
 
 **Click 4:**  
+**Initiates:**  
+- **Music Cue:** [Fade out music placeholder].
+
+**Click 5:**  
 **Initiates:**  
 - **MC prompt:** “In Chinese tradition, the new couple will offer tea while kneeling as a sign of deep respect and gratitude to their parents. Christina and Phillip, please kneel.”  
 - **Live Action:** The couple kneels together.
 
-**Click 5 (End Slide 1):**  
+**Click 6 (End Slide 1):**  
 - **Initiates:** Transition to **Slide 2 – Serving Tea to Parents**.
 
 ---

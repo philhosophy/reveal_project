@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tea Ceremony Slide Deck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Reveal.js styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <style>
+      /* Prevent text selection */
+      .reveal {
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+
+      /* Improved slide formatting */
+      .slides {
+        font-size: 0.5em;
+        line-height: 1.1;
+      }
+
+      .slides h2 {
+        color: #f0f0f0;
+        margin-bottom: 0.3em;
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      /* Format list items and fragments */
+      .slides ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .slides li {
+        margin-bottom: 0.4em;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.4em;
+        border-radius: 4px;
+      }
+
+      /* Consistent styling for all prompts and actions */
+      .prompt-label, .action-label, .music-label {
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 0.3em;
+      }
+
+      .mc-prompt, .live-action, .music-cue {
+        margin: 0.2em 0;
+        padding: 0.2em 0;
+      }
+
+      .mc-prompt {
+        color: #87CEEB;
+      }
+
+      .live-action {
+        color: #98FB98;
+      }
+
+      .music-cue {
+        color: #DDA0DD;
+      }
+
+      /* Click numbers */
+      .click-number {
+        font-weight: bold;
+        color: #FFA500;
+        margin-bottom: 0.2em;
+      }
+
+      /* Adjust fragment animations */
+      .fragment {
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .fragment.visible {
+        opacity: 1;
+      }
+
+      /* Make sure content fits in slides without scrolling */
+      .reveal .slides section {
+        padding: 5px;
+        height: 90vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Ensure slide content is centered and contained */
+      .reveal .slides {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Adjust spacing for better fit */
+      strong {
+        display: inline-block;
+        margin-bottom: 0.1em;
+      }
+
+      br {
+        display: block;
+        margin: 0.1em 0;
+      }
+
+      /* Make sure the slide container takes full height */
+      .reveal, .slides, section {
+        height: 90vh;
+      }
+
+      /* Ensure content is centered vertically */
+      .reveal .slides section > * {
+        margin: 0;
+      }
+
+      /* Compact lists */
+      ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Style for the return to start button */
+      .navigate-return {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 24px;
+        padding: 6px 12px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+        z-index: 31;
+      }
+
+      .navigate-return:hover {
+        opacity: 1;
+      }
+
+      /* Adjust position of existing controls */
+      .reveal .controls {
+        bottom: 60px !important;  /* Move up to make room for return button */
+      }
+
+      /* Style for disabled state */
+      .navigate-return.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <button class="navigate-return" id="returnButton" title="Return to Start">⌂</button>
+      <div class="slides">
+
+        <!-- Slide 1: Welcome & Entrance -->
+        <section>
+          <h2>Welcome & Entrance</h2>
+          <ul>
+            <li class="fragment">
+              <div class="click-number">Click 1</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Good afternoon, everyone, and welcome to Phil and Christina's wedding celebration. We will begin with the traditional tea ceremony to honor their parents. May I kindly invite the parents of the groom to be seated at the tea table?"
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Parents (of both the groom and the bride) move to their designated seats.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 2</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Please now welcome the new couple, Phillip and Christina."
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 3</div>
+              <div class="music-cue">
+                <span class="music-label">Music:</span>
+                [Start music placeholder]
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                The couple walks in through the foyer into the house and stands in front of their parents.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 4</div>
+              <div class="music-cue">
+                <span class="music-label">Music:</span>
+                [Fade out music placeholder]
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 5</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "In Chinese tradition, the new couple will offer tea while kneeling as a sign of deep respect and gratitude to their parents. Christina and Phillip, please kneel."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                The couple kneels together.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 6 (End Slide 1)</div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Transition to Slide 2.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 2: Serving Tea to Parents -->
+        <section>
+          <h2>Serving Tea to Parents</h2>
+          <ul>
+            <li class="fragment">
+              <div class="click-number">Click 1</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "The groom will now say a few words of appreciation to his parents."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Phil delivers his short poem/speech and performs the kowtow.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 2</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Phil and Christina will now serve tea to groom's parents."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Phil offers tea to his father ("Dad, please drink tea") and Christina offers tea to his mother ("Mom, please drink tea"). Parents drink the tea and return the cups.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 3</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Groom's father, please say a few things."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Phil's father gives a brief blessing or congratulatory words.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 4</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Groom's mother, please say a blessing."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Phil's mother gives her blessing.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 5</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Groom's parents, please present gifts."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Phil's parents present their gifts (e.g., bracelets, red envelopes, etc.) to the couple.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 6 (End Slide 2):</div> Transition to Slide 3.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 3: Serving Tea to Bride's Mother -->
+        <section>
+          <h2>Serving Tea to Bride's Mother</h2>
+          <ul>
+            <li class="fragment">
+              <div class="click-number">Click 1</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "The bride will now say a few things to her mother."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Christina speaks to her mother, expressing thanks and love.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 2</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Phil and Christina, please now serve tea to Christina's mother."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Christina offers tea to her mother ("Mom, please drink tea") and Phil also offers tea ("Mom, please drink tea"). The mother drinks her tea.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 3</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "Bride's mother, please say a few words of blessing."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                The bride's mother gives her blessing.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 4</div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                The bride's mother presents her gifts (red envelopes, jewelry, etc.) to the couple.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 5 (End Slide 3)</div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Transition to Slide 4.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 4: Conclusion of Tea Ceremony -->
+        <section>
+          <h2>Conclusion of Tea Ceremony</h2>
+          <ul>
+            <li class="fragment">
+              <div class="click-number">Click 1</div>
+              <div class="mc-prompt">
+                <span class="prompt-label">MC:</span>
+                "This concludes the tea ceremony. We have witnessed Phil and Christina honor their families with gratitude and respect. Thank you to both families for your support and blessings. We will now proceed to the vows."
+              </div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Transition to the next part of the ceremony.
+              </div>
+            </li>
+            <li class="fragment">
+              <div class="click-number">Click 2 (End Slide 4)</div>
+              <div class="live-action">
+                <span class="action-label">Action:</span>
+                Final transition.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Audio element for MC prompts -->
+    <audio id="mcSound" preload="auto">
+      <source src="assets/audio/sample.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Add music audio element -->
+    <audio id="musicSound" preload="auto">
+      <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Reveal.js core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script>
+      const mcAudio = document.getElementById('mcSound');
+      const musicAudio = document.getElementById('musicSound');
+      let isMcAudioPlaying = false;  // Separate state for MC audio
+
+      // Initialize Reveal.js with keyboard enabled
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        fragments: true,
+        navigationMode: 'linear',
+        keyboard: true  // Make sure keyboard is enabled
+      });
+
+      // Add fragment shown event handler
+      Reveal.on('fragmentshown', function(event) {
+        if (isMcAudioPlaying) return;  // Only block for MC audio
+        
+        const fragment = event.fragment;
+        const mcPrompt = fragment.querySelector('.mc-prompt');
+        const musicCue = fragment.querySelector('.music-cue');
+
+        if (mcPrompt) {
+          isMcAudioPlaying = true;
+          mcAudio.currentTime = 0;
+          mcAudio.play().catch(error => {
+            console.error('Audio playback failed:', error);
+            isMcAudioPlaying = false;
+          });
+        } else if (musicCue) {
+          const text = musicCue.textContent;
+          if (text.includes('Start')) {
+            musicAudio.currentTime = 0;
+            musicAudio.play().catch(error => {
+              console.error('Music playback failed:', error);
+            });
+          } else if (text.includes('Fade')) {
+            // Fade out music over 2 seconds
+            const fadeInterval = setInterval(() => {
+              if (musicAudio.volume > 0.1) {
+                musicAudio.volume -= 0.1;
+              } else {
+                musicAudio.pause();
+                musicAudio.volume = 1;
+                clearInterval(fadeInterval);
+              }
+            }, 200);
+          }
+        }
+      });
+
+      // Handle click navigation
+      document.addEventListener('click', function(event) {
+        if (isMcAudioPlaying) {  // Only block for MC audio
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        }
+
+        if (!event.target.closest('.controls') && !event.target.closest('.navigate-return')) {
+          Reveal.next();
+        }
+      }, true);
+
+      // Update return button functionality
+      document.querySelector('.navigate-return').addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (!isMcAudioPlaying) {  // Only block for MC audio
+          Reveal.slide(0);
+          document.querySelectorAll('.fragment.visible').forEach(fragment => {
+            fragment.classList.remove('visible', 'current-fragment');
+          });
+          Reveal.sync();
+        }
+      }, true);
+
+      // Audio event handlers
+      mcAudio.addEventListener('play', function() {
+        isMcAudioPlaying = true;
+        // Disable navigation during MC audio only
+        Reveal.configure({ keyboard: false });
+        
+        document.querySelectorAll('.navigate-right, .navigate-left, .navigate-up, .navigate-down, .navigate-return').forEach(control => {
+          control.style.opacity = '0.5';
+          control.style.cursor = 'not-allowed';
+          control.setAttribute('disabled', 'disabled');
+        });
+      });
+
+      mcAudio.addEventListener('ended', function() {
+        isMcAudioPlaying = false;
+        // Re-enable navigation after MC audio
+        Reveal.configure({ keyboard: true });
+        
+        document.querySelectorAll('.navigate-right, .navigate-left, .navigate-up, .navigate-down, .navigate-return').forEach(control => {
+          control.style.opacity = '1';
+          control.style.cursor = 'pointer';
+          control.removeAttribute('disabled');
+        });
+      });
+
+      // Handle audio errors
+      mcAudio.addEventListener('error', function() {
+        isMcAudioPlaying = false;
+        Reveal.configure({ keyboard: true });
+        console.error('Audio error:', mcAudio.error);
+      });
+
+      // Music audio error handler (doesn't affect navigation)
+      musicAudio.addEventListener('error', function() {
+        console.error('Audio error:', musicAudio.error);
+      });
+    </script>
+  </body>
+</html>
+  
