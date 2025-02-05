@@ -4,7 +4,8 @@
 
 **Click 1:**  
 **Initiates:**  
-- **MC prompt:** “Good afternoon, everyone, and welcome to Phil and Christina’s wedding celebration. We will begin with the traditional tea ceremony to honor their parents. May I kindly invite the parents of the groom to be seated at the tea table?”  
+**Music Cue:** Start music immediately. Play for 10 seconds then fade the music.
+- **MC prompt:** “Good afternoon, everyone, and welcome to Phillip, Christina, and Gon’s double celebration. We will begin with the traditional tea ceremony to honor the bride and groom’s parents. We kindly ask our guests make their way out of the sunken lounge to face the front entrance, and the parents of the bride and groom to be seated.”
 - **Live Action:** Parents (of both the groom and the bride) move to their designated seats (facing the couple).
 
 **Click 2:**  
@@ -35,7 +36,7 @@
 **Click 1:**  
 **Initiates:**  
 - **MC prompt:** “The groom will now say a few words of appreciation to his parents.”  
-- **Live Action:** Phil delivers his short poem/speech and performs the kowtow.
+- **Live Action:** Phil delivers his short poem/speech and couple kowtows.
 
 **Click 2:**  
 **Initiates:**  
